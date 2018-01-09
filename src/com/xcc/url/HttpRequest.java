@@ -243,7 +243,7 @@ Cookie: JSESSIONID=152EA725DB91B0321462E2CFA03F04AC; nginx=4d77745cfe3c2eaf4d675
 	}
 
 	public static void JsonTest(String urlstr) throws Exception{
-
+		boolean flag=true;
 		//FileInputStream inp = new FileInputStream("te.txt");
 		//byte[] b = new byte[41207];
 		//int length = inp.read(b);
@@ -271,20 +271,42 @@ Cookie: JSESSIONID=152EA725DB91B0321462E2CFA03F04AC; nginx=4d77745cfe3c2eaf4d675
 			String str=sendGet(strs[i],"");
 		//	System.out.println(str);
 			JSONObject object=new JSONObject(str);
-			System.out.println(i+1+"."+object.get("content"));
-			JSONArray array=object.getJSONArray("list");
-
-
-			for(int temp1=0;temp1<array.length();temp1++){
-				JSONObject object1=(JSONObject) array.get(temp1);
-				System.out.print(object1.get("letter"));
-				System.out.println(object1.get("content"));
+			if(object.get("type").equals("5")){
+				System.out.println(i+1+"."+object.get("content"));
+				JSONArray array1=object.getJSONArray("list");
+				for(int temp1=0;temp1<array1.length();temp1++){
+					JSONObject object1=(JSONObject) array1.get(temp1);
+					System.out.println(object1.get("content"));
+					JSONArray array2=object1.getJSONArray("list");
+					for(int temp3=0;temp3<array2.length();temp3++){
+						JSONObject object3=(JSONObject) array2.get(temp3);
+						System.out.print(object3.get("letter"));
+						System.out.println(object3.get("content"));
+					}
+					System.out.print("正确答案：");
+					System.out.println(object1.get("answerOption"));
+					System.out.println("分析："+object1.get("analysis")+"\n");
+				}
 				
-			}
-			System.out.print("正确答案：");
-			System.out.println(object.get("answerOption"));
-			System.out.println("分析："+object.get("analysis")+"\n");
+				//JSONArray array2=object.getJSONArray("list");
+				
+				
+				
+			}else{
+				System.out.println(i+1+"."+object.get("content"));
+				JSONArray array=object.getJSONArray("list");
+
+
+				for(int temp1=0;temp1<array.length();temp1++){
+					JSONObject object1=(JSONObject) array.get(temp1);
+						System.out.print(object1.get("letter"));
+						System.out.println(object1.get("content"));
+				}
 			
+					System.out.print("正确答案：");
+					System.out.println(object.get("answerOption"));
+					System.out.println("分析："+object.get("analysis")+"\n");
+			}
 		}
 
 		//BufferedInputStream io=new BufferedInputStream(url.openStream());

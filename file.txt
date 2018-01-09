@@ -1,4 +1,4 @@
-GET http://tk.accfun.com/accCjzc.html?getQuesList&type=test&knowId=c31fd7cc3f4f9e0b826b1020c85f09d3&testId=8a566a8afde3ea6a93c6caba510d076f HTTP/1.1
+GET http://tk.accfun.com/accCjzc.html?getQuesList&type=test&knowId=6b5824281c5da3966c76ce6039a89679&testId=145aeac3c1657972f4587384ed8beb5c HTTP/1.1
 Host: tk.accfun.com
 Connection: keep-alive
 User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
