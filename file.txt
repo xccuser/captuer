@@ -1,0 +1,10 @@
+GET http://tk.accfun.com/accCjzc.html?getQuesList&type=test&knowId=c31fd7cc3f4f9e0b826b1020c85f09d3&testId=8a566a8afde3ea6a93c6caba510d076f HTTP/1.1
+Host: tk.accfun.com
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.89 Safari/537.36
+Upgrade-Insecure-Requests: 1
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+Accept-Encoding: gzip, deflate
+Accept-Language: zh-CN,zh;q=0.9
+Cookie: JSESSIONID=6EB18379FD99B0D9BCF919D1A66928F7; nginx=4d77745cfe3c2eaf4d675706b49206e8; Hm_lvt_c97145c1d82787f6f2157fdacf2128cf=1515479156; Hm_lpvt_c97145c1d82787f6f2157fdacf2128cf=1515479190
+
